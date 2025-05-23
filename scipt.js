@@ -21,13 +21,65 @@ const bookGrid = document.getElementById("bookGrid");
 const priceFilter = document.getElementById("priceFilter");
 const genreFilter = document.getElementById("genreFilter");
 const yearFilter = document.getElementById("yearFilter");
+const searchInput = document.getElementById("searchInput");
 
 function renderBooks(filteredBooks) {
   bookGrid.innerHTML = "";
+  if (filteredBooks.length === 0) {
+    bookGrid.innerHTML = "<p>No se encontraron libros.</p>";
+    return;
+  }
   filteredBooks.forEach(book => {
     const div = document.createElement("div");
     div.className = "book";
     div.innerHTML = `
+<div class="book-container">
+<img src="${book.cover}" alt="${book.title}">
+<div class="book-info">
+<p><strong>${book.title}</strong></p>
+<p>${book.author}</p>
+<p>Precio: $${book.price}</p>
+<p>Formato: ${book.format || "No especificado"}</p>
+</div>
+</div>
+    `;
+    bookGrid.appendChild(div);
+  });
+}
+function applyFilters() {
+  let filtered = [...books];
+  const selectedGenre = genreFilter.value;
+  const selectedYear = yearFilter.value;
+  const priceOrder = priceFilter.value;
+  const searchText = searchInput.value.toLowerCase();
+  if (selectedGenre !== "all") {
+    filtered = filtered.filter(book => book.genre === selectedGenre);
+  }
+  if (selectedYear !== "all") {
+    filtered = filtered.filter(book => book.year == selectedYear);
+  }
+  if (searchText.trim() !== "") {
+    filtered = filtered.filter(book =>
+      book.title.toLowerCase().includes(searchText) ||
+      book.author.toLowerCase().includes(searchText)
+    );
+  }
+  if (priceOrder === "asc") {
+    filtered.sort((a, b) => a.price - b.price);
+  } else if (priceOrder === "desc") {
+    filtered.sort((a, b) => b.price - a.price);
+  }
+  renderBooks(filtered);
+}
+
+
+// Escuchamos todos los filtros
+priceFilter.addEventListener("change", applyFilters);
+genreFilter.addEventListener("change", applyFilters);
+yearFilter.addEventListener("change", applyFilters);
+searchInput.addEventListener("input", applyFilters);
+// Render inicial
+renderBooks(books);
       <div class="book-container">
         <img src="${book.cover}" alt="${book.title}">
         <div class="book-info">
