@@ -1,0 +1,55 @@
+<header>
+  <div class="topbar">
+    <div class="branding">
+      <img src="https://i.postimg.cc/fR7ZTbFC/image.png" alt="Logo Librería ARU" class="logo">
+      <span class="site-name">LIBRERÍA ARU</span>
+    </div>
+    <nav class="user-nav">
+      <a href="#">MI CUENTA</a> | 
+      <a href="#">MI LISTA DE DESEOS</a> | 
+      <a href="#">MI CARRITO</a> | 
+      <a href="#">INICIA SESIÓN</a>
+    </nav>
+  </div>
+
+  <h1>LIBROS</h1>
+
+  <nav class="categories">
+    <a href="#">NOVEDADES</a>
+  </nav>
+</header>
+<section class="filters">
+  <label for="priceFilter">Ordenar por precio:</label>
+  <select id="priceFilter">
+    <option value="default">Ordenar por precio</option>
+    <option value="asc">Menor a mayor</option>
+    <option value="desc">Mayor a menor</option>
+  </select>
+
+  <label for="genreFilter">Filtrar por género:</label>
+  <select id="genreFilter">
+    <option value="all">Todos los géneros</option>
+    <option value="Ficción">Ficción</option>
+    <option value="No Ficción">No Ficción</option>
+    <option value="Fantasía">Fantasía</option>
+    <option value="Ciencia Ficción">Ciencia Ficción</option>
+    <option value="Romance">Romance</option>
+    <option value="Misterio">Misterio</option>
+    <option value="Biografía">Biografía</option>
+  </select>
+  
+
+  <label for="yearFilter">Filtrar por año:</label>
+  <select id="yearFilter">
+    <option value="all">Todos los años</option>
+    <option value="2025">2025</option>
+    <option value="2024">2024</option>
+    <option value="2023">2023</option>
+    <option value="2022">2022</option>
+    <option value="2021">2021</option>
+    <option value="2020">2020</option>
+    
+  </select>
+</section>
+
+<main id="bookGrid" class="grid"></main>
