@@ -206,6 +206,7 @@ footer li {
   overflow-wrap: break-word;
   white-space: normal;
   line-height: 1.2;
+  font-size: 13px;
 }
 
 /* --- Al hacer hover, muestra la info del libro --- */
