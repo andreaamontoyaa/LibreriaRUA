@@ -15,6 +15,17 @@ const books = [
   { title: "Book Lovers", author:"Emily Henry", genre: "Romance", year: 2022, price: 299, format:"Pasta Blanda", cover: "https://haverhillpl.org/wp-content/uploads/2022/06/booklovers.jpg" },
   { title: "El Albatros Negro", author:"María Oruña", genre: "Misterio", year: 2025, price: 529, format:"Pasta Dura", cover: "https://imagessl4.casadellibro.com/a/l/s5/94/9788401034794.webp" },
   { title: "Crying in H Mart", author:"Michelle Zauner", genre: "Biografía", year: 2021, price: 500, format:"Pasta Blanda/Pasta Dura", cover: "https://m.media-amazon.com/images/I/81aS9JndklL._AC_UF894,1000_QL80_.jpg" },
+  { title: "Matriarch: A Memoir", author:"Tina Knowles", genre: "Biografía", year: 2025, price: 710, format:"Pasta Dura", cover: "https://m.media-amazon.com/images/I/91at8Eu8ODL._AC_UF1000,1000_QL80_.jpg" },
+  { title: "Olga Dies Dreaming", author:"Xochitl Gonzalez", genre: "Ficción", year: 2022, price: 290, format:"Ebook/Pasta Blanda", cover: "https://mpd-biblio-covers.imgix.net/9781250786173.jpg" },
+  { title: "Yellow Bird: Oil, Murder, and a Woman's Search for Justice in Indian Country", author:"Sierra Crane Murdoch", genre: "Biografía", year: 2020, price: 500, format:"Pasta Blanda", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTONfOMPAtxLzEnC8mV7HlzY5gKbtVwtA4OEQ&s"},
+  { title: "Viuda de hierro: Iron Widow", author:"Xiran Jay Zhao", genre: "Ciencia Ficción", year: 2021, price: 353, format:"Pasta Blanda", cover: "https://m.media-amazon.com/images/I/81cYkC-zelL.jpg"},
+  { title: "The Burning God", author:"R.F. Kuang", genre: "Fantasía", year: 2020, price: 353, format:"Pasta Blanda", cover: "https://m.media-amazon.com/images/I/71pNOR-3x3L._UF894,1000_QL80_.jpg"},
+  { title: "I Heard Her Call My Name: A Memoir of Transition", author:"Lucy Sante", genre: "Biografía", year: 2024, price: 410, format:"Pasta Blanda/Pasta Dura", cover: "https://m.media-amazon.com/images/I/7193SrwqmqL._AC_UF1000,1000_QL80_.jpg"},
+  { title: "Fire Weather", author:"John Vaillant", genre: "No Ficción", year: 2023, price: 390, format:"Pasta Blanda", cover: "https://m.media-amazon.com/images/I/81lcrLCVgsL.jpg"},
+  { title: "Seven Days in June", author:"Tia Williams", genre: "Romance", year: 2021, price: 566, format:"Pasta Dura", cover: "https://m.media-amazon.com/images/I/91vd0KdrWBL._AC_UF894,1000_QL80_.jpg"},
+  { title: "The Paris Apartment", author:"Lucy Foley", genre: "Misterio", year: 2022, price: 388, format:"Pasta Blanda", cover: "https://m.media-amazon.com/images/I/81AqVcL4OML.jpg"},
+   { title: "Deep End", author:"Ali Hazelwood", genre: "Romance", year: 2025, price: 533, format:"Pasta Dura", cover: "https://m.media-amazon.com/images/I/91q7ElhoupL._AC_UF894,1000_QL80_DpWeblab_.jpg"},
+   { title: "Hello Beautiful", author:"Ann Napolitano", genre: "Ficción", year: 2023, price: 260, format:"Ebook", cover: "https://m.media-amazon.com/images/I/91CQZ+V4ypL.jpg"}
 ];
 
 const bookGrid = document.getElementById("bookGrid");
