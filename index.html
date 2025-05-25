@@ -1,7 +1,7 @@
 <header>
   <div class="topbar">
     <div class="branding">
-      <img src="https://i.postimg.cc/fR7ZTbFC/image.png" alt="Logo Librería ARU" class="logo">
+      <img src="https://i.postimg.cc/fR7ZTbFC/image.png" alt="Logo Librería ARU" class="logo" >
       <span class="site-name">LIBRERÍA ARU</span>
     </div>
     <nav class="user-nav">
@@ -15,10 +15,18 @@
   <h1>LIBROS</h1>
 
   <nav class="categories">
-    <a href="#">NOVEDADES</a>
+    <a>NOVEDADES</a>
   </nav>
 </header>
-<section class="filters">
+
+<section class="filters-wrapper">
+  <div class="search-wrapper">
+    <label for="searchInput">Buscar:</label>
+  <input type="text" id="searchInput" placeholder="Escriba aquí... " onkeyup="filterBooks()"/>
+  </div>
+  
+  <button id="toggleFilters" class="filters-toggle">Filtros ↓</button>
+  <div class="filters" id="filtersPanel">
   <label for="priceFilter">Ordenar por precio:</label>
   <select id="priceFilter">
     <option value="default">Ordenar por precio</option>
@@ -48,10 +56,8 @@
     <option value="2022">2022</option>
     <option value="2021">2021</option>
     <option value="2020">2020</option>
-    
   </select>
-  <label for="searchInput">Buscar:</label>
-  <input type="text" id="searchInput" placeholder="Escriba aquí... " onkeyup="filterBooks()"/>
+  </div>
 </section>
 
 <main id="bookGrid" class="grid"></main>
