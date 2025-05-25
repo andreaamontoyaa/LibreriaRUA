@@ -34,6 +34,10 @@ const genreFilter = document.getElementById("genreFilter");
 const yearFilter = document.getElementById("yearFilter");
 const searchInput = document.getElementById("searchInput");
 
+/*Boton Filtro de Busqueda*/
+const toggleFiltersBtn = document.getElementById("toggleFilters");
+const filtersPanel = document.getElementById("filtersPanel");
+
 function renderBooks(filteredBooks) {
   bookGrid.innerHTML = "";
   if (filteredBooks.length === 0) {
@@ -89,44 +93,13 @@ priceFilter.addEventListener("change", applyFilters);
 genreFilter.addEventListener("change", applyFilters);
 yearFilter.addEventListener("change", applyFilters);
 searchInput.addEventListener("input", applyFilters);
-// Render inicial
-renderBooks(books);
-      <div class="book-container">
-        <img src="${book.cover}" alt="${book.title}">
-        <div class="book-info">
-          <p>Precio: $${book.price}</p>
-          <p>Formato: ${book.format || "No especificado"}</p>
-        </div>
-      </div>
-    `;
-    bookGrid.appendChild(div);
-  });
-}
 
-function applyFilters() {
-  let filtered = [...books];
-  const selectedGenre = genreFilter.value;
-  const selectedYear = yearFilter.value;
-  const priceOrder = priceFilter.value;
-
-  if (selectedGenre !== "all") {
-    filtered = filtered.filter(book => book.genre === selectedGenre);
-  }
-  if (selectedYear !== "all") {
-    filtered = filtered.filter(book => book.year == selectedYear);
-  }
-  if (priceOrder === "asc") {
-    filtered.sort((a, b) => a.price - b.price);
-  } else if (priceOrder === "desc") {
-    filtered.sort((a, b) => b.price - a.price);
-  }
-
-  renderBooks(filtered);
-}
-
-priceFilter.addEventListener("change", applyFilters);
-genreFilter.addEventListener("change", applyFilters);
-yearFilter.addEventListener("change", applyFilters);
+//Escuchamos el botón de Filtros//
+toggleFiltersBtn.addEventListener("click", ()=> {
+  const isVisible = filtersPanel.style.display === "flex";
+  filtersPanel.style.display = isVisible ? "none" : "flex";
+  toggleFiltersBtn.textContent = isVisible ? "Filtros ↓" : "Filtros ↑";
+});
 
 // Render inicial
 renderBooks(books);
