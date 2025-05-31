@@ -1,0 +1,3 @@
+La funcionalidad del foro de comunidad es fomentar la interacción entre lectores. 
+Los usuarios podrán unirse a conversaciones sobre libros, autores, géneros literarios y temas de interés. 
+Cada foro permitirá publicar mensajes y responder a otros. 
