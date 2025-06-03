@@ -27,7 +27,7 @@ header {
 .topbar .site-name {
   font-family: 'EB Garamond', serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .topbar a {
@@ -38,7 +38,7 @@ header {
 
 /* --- Logo --- */
 .logo {
-  height: 50px;
+  height: 60px;
   display: block;
 }
 
@@ -269,5 +269,24 @@ footer li {
 .book-container:hover img {
   transform: scale(1.05);
 }
+
+/*Íconos*/
+.user-nav{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.user-nav .nav-icon{
+  height: 50px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.user-nav .nav-icon:hover{
+  transform: scale(1.1);
+}
+
 
 
